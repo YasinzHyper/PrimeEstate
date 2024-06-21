@@ -1,0 +1,222 @@
+@import '../../responsive.scss';
+
+.singlePage {
+    display: flex;
+    height: 100%;
+
+    @include md {
+        flex-direction: column;
+        overflow: scroll;
+    }
+    
+    .details {
+        flex: 3;
+        height: 100%;
+        overflow-y: scroll;
+        scrollbar-width: 1px;
+        scrollbar-color: #88888815 transparent;
+        padding-bottom: 40px;
+
+        @include md {
+            flex: none;
+            height: max-content;
+        }
+
+        .wrapper {
+            padding-right: 10px;
+
+            .info {
+
+                .top {
+                    display: flex;
+                    justify-content: space-between;
+
+
+                    .post {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        h1 {
+                            font-weight: 400;
+                        }
+                        .address {
+                            display: flex;
+                            gap: 5px;
+                            align-items: center;
+                            color: #888;
+                            font-size: 14px;
+
+                            img {
+                                width: 16px;
+                                height: 16px;
+
+                            }
+                        }
+                        .price {
+                            padding: 5px;
+                            background-color: rgba(254,205,81,0.438);
+                            border-radius: 5px;
+                            width: max-content;
+                            font-size: 20px;
+                            font-weight: 300;
+                        }
+                    }
+                    .user {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 15px;
+                        padding: 0px 50px;
+                        border-radius: 5px;
+                        background-color: rgba(254,205,81,0.238);
+                        justify-content: center;
+                        // width: 120px;
+                        font-weight: 600;
+                        img {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .bottom {
+                    margin-top: 50px;
+                    color: #555;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    .features {
+        flex: 2;
+        background-color: #fcf5f3;
+        height: 100%;
+        overflow-y: scroll;
+        scrollbar-width: 1px;
+        scrollbar-color: #88888815 transparent;
+        // margin: 0;
+        // padding: 0;
+        @include md {
+            flex: none;
+            height: max-content;
+            margin-right: 10px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .wrapper {
+            padding: 10px 20px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            img {
+                width: 22px;
+                height: 22px;
+                
+            }
+
+            .title {
+                font-weight: bold;
+                font-size: 16px;
+                margin-bottom: 5px;
+
+            }
+
+            .listVertical {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 10px;
+                border-radius: 10px;
+                background-color: #fff;
+            }
+
+            .listHorizontal {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                // gap: 20px;
+                padding: 10px 15px;
+                border-radius: 10px;
+                background-color: #fff;
+            }
+
+            .sizes {
+                display: flex;
+                // flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px 5px;
+
+                @include lg {
+                    font-size: 14px;
+                }
+
+                .size {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                    padding: 8px;
+                    background-color: #fff;
+                    border-radius: 10px;
+                }
+            }
+
+            .feature {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+                font-size: 14px;
+                
+                img {
+                    background-color: rgba(254,205,81,0.200);
+                }
+
+                .featureText {
+                    span {
+                        font-weight: 600;
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .mapContainer {
+                width: 100%;
+                height: 200px;
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px 10px;
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px;
+                    gap: 10px;
+                    background-color: #fff;
+                    border: yellow 1px solid;
+                    cursor: pointer;
+                    border-radius: 5px;
+
+                    img {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
