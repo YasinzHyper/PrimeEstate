@@ -35,13 +35,13 @@ export const login = async (req, res) => {
     });
 
     if (!user) {
-      return res.status(401).json({ message: "Invalid credentials" });
+      return res.status(400).json({ message: "Invalid credentials" });
     }
 
     const isPassValid = await bcrypt.compare(password, user.password);
 
     if (!isPassValid)
-      return res.status(401).json({ message: "Invalid credentials" });
+      return res.status(400).json({ message: "Invalid credentials" });
 
     // res.setHeader("Set-Cookie", "text=" + "myValue").json({ message: "Logged in" });
     const age = 1000 * 60 * 60 * 24 * 7;
@@ -49,7 +49,7 @@ export const login = async (req, res) => {
     const token = jwt.sign(
       {
         id: user.id,
-        // isAdmin: true,
+        isAdmin: false,
       },
       process.env.JWT_SECRET,
       {
