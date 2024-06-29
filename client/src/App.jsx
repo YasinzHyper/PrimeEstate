@@ -8,6 +8,7 @@ import ProfilePage from "./routes/profilePage/profilePage.jsx";
 import Register from "./routes/register/register.jsx";
 import ProfileUpdate from "./routes/profileUpdate/profileUpdate.jsx";
 import NewPostPage from "./routes/newPostPage/newPostPage.jsx";
+import { singlePageLoader } from "./lib/loaders.js";
 
 function App() {
   const router = createBrowserRouter([
@@ -26,6 +27,7 @@ function App() {
         {
           path: "/:id",
           element: <SinglePage />,
+          loader: singlePageLoader,
         },
         {
           path: "/login",
