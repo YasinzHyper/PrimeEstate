@@ -13,5 +13,5 @@ npm run dev
 **Backend**
 ```
 cd server
-nodemon run
+npm run dev
 ```
