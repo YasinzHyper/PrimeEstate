@@ -2,16 +2,20 @@ A Full-Stack real estate web application built using MERN stack.
 
 ## Steps to run
 
-First Navigate to the project directory.
+1. Clone/fork the repository.
+2. Navigate to the project directory.
+3. Then split the terminal, or use 2 separate terminals (1. Client side (frontend), 2. Server side(backend)):
 
-**Client Side**
+**3.1 Client Side**
 ```
 cd client
+npm i
 npm run dev
 ```
 
-**Backend**
+**3.2 Backend**
 ```
 cd server
+npm i
 npm run dev
 ```
