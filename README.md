@@ -21,3 +21,6 @@ npm run dev
 ```
 
 **Tech Stack**
+
+Backend: JavaScript, Nodejs, Expressjs, Prisma(MongoDB).
+Frontend: React, Vite, Sass.
