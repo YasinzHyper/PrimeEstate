@@ -98,7 +98,7 @@ export const savePost = async (req, res) => {
         data: {
           userId: tokenUserId,
           postId: postId,
-        }
+        },
       });
       res.status(200).json({ message: "Post saved successfully!" });
     }
@@ -123,10 +123,10 @@ export const profilePosts = async (req, res) => {
       },
       include: {
         post: true,
-      }
+      },
     });
     const savedPosts = saved.map((item) => item.post);
-    res.status(200).json({userPosts,savedPosts});
+    res.status(200).json({ userPosts, savedPosts });
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: "Failed to get user posts!" });
