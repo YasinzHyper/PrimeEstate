@@ -4,8 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext.jsx";
 
 const HomePage = () => {
-
-  const {currentUser} = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
   console.log(currentUser);
 
   return (

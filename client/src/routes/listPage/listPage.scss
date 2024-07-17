@@ -1,28 +1,28 @@
 .listPage {
-    display: flex;
-    // background-color: #fcf5f3;
+  display: flex;
+  // background-color: #fcf5f3;
+  height: 100%;
+  // width: 100%;
+
+  .listContainer {
+    flex: 3;
     height: 100%;
-    // width: 100%;
 
-    .listContainer {
-        flex: 3;
-        height: 100%;
-
-        .wrapper {
-            height: 100%;
-            padding-right: 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-            overflow-y: scroll;
-            scrollbar-width: none;
-            padding-bottom: 50px;
-        }
+    .wrapper {
+      height: 100%;
+      padding-right: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      overflow-y: scroll;
+      scrollbar-width: none;
+      padding-bottom: 50px;
     }
+  }
 
-    .mapContainer {
-        flex: 2;
-        height: 100%;
-        background-color: #fcf5f3;
-    }
+  .mapContainer {
+    flex: 2;
+    height: 100%;
+    background-color: #fcf5f3;
+  }
 }

@@ -42,7 +42,7 @@ function NewPostPage() {
           bus: parseInt(inputs.bus),
         },
       });
-      navigate('/'+res.data.id);
+      navigate("/" + res.data.id);
     } catch (error) {
       setError(error);
       console.log(error);
@@ -155,8 +155,8 @@ function NewPostPage() {
         </div>
       </div>
       <div className="sideContainer">
-        {images.map((image,index) => (
-          <img src={image} key={index} alt="post image"/>
+        {images.map((image, index) => (
+          <img src={image} key={index} alt="post image" />
         ))}
         <UploadWidget
           uwConfig={{
