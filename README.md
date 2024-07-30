@@ -47,6 +47,7 @@ CLIENT_URL=http://localhost:5173 (or) any other url
 ```
 4. Then split the terminal, or use 2 separate terminals (1. Client side (frontend), 2. Server side(backend)):
 
+Run this in the client side terminal
 **4.1 Client Side**
 ```
 cd client
@@ -54,6 +55,7 @@ npm i
 npm run dev
 ```
 
+Run this in the server-side (api) terminal
 **4.2 Backend**
 ```
 cd server
