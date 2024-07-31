@@ -1,19 +1,9 @@
 import express from "express";
-import { deleteUser, getUser, getUsers, profilePosts, savePost, updateUser } from "../controllers/user.controller.js";
+import { addMessage } from "../controllers/message.controller.js";
 import { verifyToken } from "../middleware/verifyToken.js";
 
-const userRouter = express.Router();
+const messageRouter = express.Router();
 
-userRouter.get("/", getUsers);
+messageRouter.post("/:chatId", verifyToken, addMessage);
 
-// userRouter.get("/:id", verifyToken,getUser);
-
-userRouter.put("/:id", verifyToken, updateUser);
-
-userRouter.delete("/:id", verifyToken,deleteUser);
-
-userRouter.post('/save', verifyToken, savePost);
-
-userRouter.get('/profilePosts', verifyToken, profilePosts);
-
-export default userRouter;
+export default messageRouter;

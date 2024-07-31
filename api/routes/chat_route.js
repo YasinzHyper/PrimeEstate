@@ -10,6 +10,6 @@ chatRouter.get("/:id", verifyToken,getChat);
 
 chatRouter.post("/", verifyToken, addChat);
 
-chatRouter.post("/read/:id", verifyToken, readChat);
+chatRouter.put("/read/:id", verifyToken, readChat);
 
 export default chatRouter;
