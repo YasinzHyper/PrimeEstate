@@ -45,9 +45,10 @@ DATABASE_URL="<your-mongdb-url>"
 JWT_SECRET="<your-secret>"
 CLIENT_URL=http://localhost:5173 (or) any other url
 ```
-4. Then split the terminal, or use 2 separate terminals (1. Client side (frontend), 2. Server side(backend)):
+4. Then split the terminal into 3, or use 3 separate terminals (1. Client side (frontend), 2. Server side(backend), 3. Socket.io (real-time messaging)):
 
 Run this in the client side terminal
+
 **4.1 Client Side**
 ```
 cd client
@@ -56,12 +57,23 @@ npm run dev
 ```
 
 Run this in the server-side (api) terminal
+
 **4.2 Backend**
 ```
 cd server
 npm i
 npm run dev
 ```
+
+Run this in the 3rd terminal (socket) terminal
+
+**4.3 Real-time Messaging (Socket.io)**
+```
+cd socket
+npm i
+npm run dev
+```
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
