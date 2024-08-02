@@ -6,12 +6,14 @@ A Full-Stack real estate web application built using MERN stack.
 
 ## Features
 
-- User Authentication and State Persistance.
-- View and save properties.
-- List your own properties.
-- Update your user profile, view listed and saved posts.
-- Real-time Chat functionality. 
-- Powerful Search/Query functionality.
+- **User Authentication and State Persistence:** Secure login and registration with persistent user sessions.
+- **Property Viewing and Saving:** Browse and save your favorite properties for easy access.
+- **Property Listing:** Easily list your own properties for sale or rent.
+- **User Profile Management:** Update your profile and manage your listed and saved properties.
+- **Real-time Chat:** Engage in instant messaging with property owners and potential buyers.
+- **Advanced Search:** Utilize powerful search and query functionalities to find the perfect property. 
+
+
 
 ### Built With
 
