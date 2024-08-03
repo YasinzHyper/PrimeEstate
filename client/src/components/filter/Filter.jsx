@@ -10,7 +10,7 @@ function Filter() {
     property: searchParams.get("property") || "",
     minPrice: parseInt(searchParams.get("minPrice")) || 0,
     maxPrice: parseInt(searchParams.get("maxPrice")) || 10000000000000,
-    bedroom: parseInt(searchParams.get("bedroom")) || 1,
+    bedroom: parseInt(searchParams.get("bedroom")) || null,
   });
 
   const handleChange = (e) => {
@@ -81,6 +81,7 @@ function Filter() {
             placeholder="any"
             onChange={handleChange}
             defaultValue={query.minPrice}
+            min={0}
           />
         </div>
         <div className="item">
@@ -92,16 +93,19 @@ function Filter() {
             placeholder="any"
             onChange={handleChange}
             defaultValue={query.maxPrice}
+            min={0}
           />
         </div>
         <div className="item">
           <label htmlFor="bedroom">Bedroom</label>
           <input
-            type="text"
+            type="number"
             id="bedroom"
             name="bedroom"
             placeholder="any"
             onChange={handleChange}
+            min={0}
+            max={100}
             defaultValue={query.bedroom}
           />
         </div>

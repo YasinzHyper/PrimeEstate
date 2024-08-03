@@ -24,9 +24,9 @@ function NavBar() {
           <span>PrimeEstate</span>
         </a>
         <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Contact</a>
-        <a href="/">Agents</a>
+        <a href="#about">About</a>
+        <a href="/list">Properties</a>
+        <a href="#contact">Contact</a>
       </div>
       <div className="right">
         {currentUser ? (
@@ -53,7 +53,7 @@ function NavBar() {
           <a href="/">Home</a>
           <a href="/">About</a>
           <a href="/">Contact</a>
-          <a href="/">Agents</a>
+          <a href="/list">Properties</a>
           <a href="/">Sign in</a>
           <a href="/">Sign up</a>
         </div>

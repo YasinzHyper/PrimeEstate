@@ -67,7 +67,7 @@ function ProfilePage() {
               resolve={data.postResponse}
               errorElement={<p>Failed to get posts!</p>}
             >
-              {(postResponse) => <List posts={postResponse.data.userPosts} />}
+              {(postResponse) => <List posts={postResponse.data.savedPosts} />}
             </Await>
           </Suspense>
         </div>

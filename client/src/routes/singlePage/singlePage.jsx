@@ -11,7 +11,7 @@ import apiRequest from "../../lib/apiRequest";
 function SinglePage() {
   const post = useLoaderData();
   const navigate = useNavigate();
-  const [saved, setSaved] = useState(false);
+  const [saved, setSaved] = useState(post.isSaved);
   const { currentUser } = useContext(AuthContext);
 
   const handleSave = async () => {
@@ -23,6 +23,7 @@ function SinglePage() {
 
     try {
       await apiRequest.post("/users/save", { postId: post.id });
+      // console.log("post saved");
     } catch (error) {
       console.log(error);
       setSaved((prev) => !prev);
@@ -39,7 +40,7 @@ function SinglePage() {
               <div className="post">
                 <h1>{post.title}</h1>
                 <div className="address">
-                  <img src="./pin.png" alt="pin" />
+                  <img src="/pin.png" alt="pin" />
                   <span>{post.address}</span>
                 </div>
                 <div className="price">₹ {post.price}</div>
