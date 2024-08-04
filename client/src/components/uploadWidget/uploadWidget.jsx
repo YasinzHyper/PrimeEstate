@@ -34,7 +34,7 @@ function UploadWidget({ uwConfig, setPublicId, setState }) {
             // console.log("Done! Here is the image info: ", result.info);
             // setPublicId(result.info.public_id);
             // setState(result.info.secure_url);
-            setState(prev => [...prev,result.info.secure_url]);
+            setState((prev) => [...prev, result.info.secure_url]);
           }
         }
       );
