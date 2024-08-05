@@ -11,6 +11,7 @@ export const useNotificationStore = create((set) => ({
     } catch (error) {
       if (error.request.status === 401 || error.request.status === 403 ) { // token not present or invalid
         localStorage.removeItem("user");
+        window.location.href = "/login";
       } 
       console.log(error);
     }
