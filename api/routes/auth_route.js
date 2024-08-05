@@ -3,6 +3,8 @@ import { login, logout, register } from "../controllers/auth.controller.js";
 
 const authRouter = express.Router();
 
+// authRouter.post("/verify-token", verifyToken);
+
 authRouter.post("/register", register);
 
 authRouter.post("/login", login);

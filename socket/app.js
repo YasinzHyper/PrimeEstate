@@ -1,8 +1,10 @@
 import { Server } from "socket.io";
 
+const PORT = 4000; // || process.env.PORT;
+
 const io = new Server({
   cors: {
-    origin: "http://localhost:5173",
+    origin: "http://localhost:5173", // client (frontend) url
   },
 });
 
@@ -38,4 +40,6 @@ io.on("connection", (socket) => {
   });
 });
 
-io.listen("4000");
+io.listen(PORT, () => {
+  console.log(`WebSocket server running on port ${PORT}`);
+});
