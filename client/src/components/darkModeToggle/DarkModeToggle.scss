@@ -1,0 +1,56 @@
+.react-toggle {
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+  
+    &-track {
+      background-color: #ccc; // Light mode background
+      border-radius: 30px;
+  
+      // Dark mode track color
+      .react-toggle--checked & {
+        background-color: #333;
+      }
+  
+      // Custom icons within the toggle
+      &-check,
+      &-x {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        line-height: 1px;
+        // top: 2px;
+        bottom: 5px;
+        right:18px;
+        // left: 10px;
+      }
+    }
+  
+    &-thumb {
+      width: 24px;
+    //   height: 100px;
+      height: 24px;
+      bottom: 6px;
+      border-radius: 50%;
+      background-color: #fff; // Default thumb color
+      transition: background-color 0.3s;
+  
+      // Thumb color when checked (dark mode)
+      .react-toggle--checked & {
+        background-color: #000;
+      }
+    }
+  }
+  
+  // Additional styles for dark mode
+  body.dark-mode {
+    .react-toggle-track {
+      background-color: #333;
+    }
+  
+    .react-toggle-thumb {
+      background-color: #000;
+    }
+  }
+  

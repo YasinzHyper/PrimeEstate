@@ -3,8 +3,12 @@ import "./navbar.scss";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useNotificationStore } from "../../lib/notificationStore";
+import Toggle from "react-toggle";
+import "react-toggle/style.css";
+import DarkModeToggle from "../darkModeToggle/DarkModeToggle";
 function NavBar() {
   const [open, setOpen] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   const { currentUser } = useContext(AuthContext);
 
@@ -29,6 +33,7 @@ function NavBar() {
         <a href="#contact">Contact</a>
       </div>
       <div className="right">
+        <DarkModeToggle/>
         {currentUser ? (
           <div className="user">
             <img src={currentUser.avatar || "/noavatar.jpg"} alt="user" />

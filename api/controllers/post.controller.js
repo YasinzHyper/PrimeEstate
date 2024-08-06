@@ -54,16 +54,17 @@ export const getPost = async (req, res) => {
         }
       });
     }
-
-    const saved = await prisma.savedPost.findUnique({
-      where: {
-        userId_postId: {
-          userId,
-          postId: id,
+    let saved = false;
+    if (userId != null) {
+      const saved = await prisma.savedPost.findUnique({
+        where: {
+          userId_postId: {
+            userId,
+            postId: id,
+          },
         },
-      },
-    });
-
+      });
+    }
     res.status(200).json({ ...post, isSaved: saved ? true : false });
   } catch (error) {
     console.log(error);
