@@ -65,6 +65,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    // overflow-y: hidden;
 
     @include md {
       display: none;
@@ -76,6 +77,31 @@
 
       @include lg {
         width: 105%;
+      }
+    }
+  }
+}
+
+body.dark {
+  .homePage {
+    background-color: transparent; // Dark mode background color for homePage
+
+    .imgContainer {
+      background-color: #333; // Dark mode background color for imgContainer
+    }
+
+    .wrapper {
+      color: #e0e0e0; // Text color for light text in dark mode
+    }
+
+    .title {
+      color: #e0e0e0; // Dark mode text color for title
+    }
+
+    .boxes {
+      h1,
+      h2 {
+        color: #e0e0e0; // Dark mode text color for h1 and h2
       }
     }
   }

@@ -166,6 +166,7 @@
       .feature {
         display: flex;
         flex-direction: row;
+        padding: 2px;
         gap: 10px;
         align-items: center;
         font-size: 14px;
@@ -211,6 +212,59 @@
             height: 16px;
           }
         }
+      }
+    }
+  }
+}
+
+body.dark {
+  .singlePage {
+    .details {
+      background-color: transparent; // Dark mode background color for details
+      color: #e0e0e0; // Dark mode text color
+
+      .info {
+        .top .post .address {
+          color: #bbb; // Dark mode address color
+        }
+
+        .bottom {
+          color: #ccc; // Dark mode bottom text color
+        }
+
+        .user {
+          background-color: rgba(
+            255,
+            255,
+            255,
+            0.1
+          ); // Dark mode user background color
+        }
+      }
+    }
+
+    .features {
+      background-color: #333; // Dark mode background color for features
+      color: #e0e0e0; // Dark mode text color
+
+      .listVertical,
+      .listHorizontal {
+        background-color: #444; // Dark mode background color for lists
+      }
+
+      .sizes {
+        .size {
+          background-color: #555; // Dark mode background color for sizes
+        }
+      }
+
+      .feature img {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.2
+        ); // Dark mode background for feature images
       }
     }
   }

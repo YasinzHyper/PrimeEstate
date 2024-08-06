@@ -1,6 +1,13 @@
+@import "../../responsive.scss";
+
 .registerPage {
   height: 100%;
   display: flex;
+  flex-direction: column; // Add column direction for better responsiveness
+
+  @include lg {
+    flex-direction: row; // Row direction for larger screens
+  }
 
   .formContainer {
     flex: 3;
@@ -14,20 +21,40 @@
       flex-direction: column;
       gap: 20px;
 
+      @include md {
+        gap: 15px; // Adjust gap for medium screens
+      }
+
+      @include sm {
+        gap: 10px; // Adjust gap for small screens
+      }
+
       input {
-        padding: 20px;
+        padding: 15px;
         border: 1px solid gray;
         border-radius: 5px;
+        font-size: 16px;
+
+        @include sm {
+          padding: 10px;
+          font-size: 14px; // Adjust input size for small screens
+        }
       }
 
       button {
-        padding: 20px;
+        padding: 15px;
         border-radius: 5px;
         border: none;
         background-color: teal;
         color: white;
         font-weight: bold;
         cursor: pointer;
+        font-size: 16px;
+
+        @include sm {
+          padding: 12px;
+          font-size: 14px; // Adjust button size for small screens
+        }
 
         &:disabled {
           background-color: #bed9d8;
@@ -37,6 +64,11 @@
 
       span {
         color: rgba(255, 0, 0, 0.591);
+        font-size: 14px; // Adjust font size for small screens
+
+        @include sm {
+          font-size: 12px;
+        }
       }
 
       a {
@@ -44,18 +76,57 @@
         color: gray;
         border-bottom: 1px solid gray;
         width: max-content;
+
+        @include sm {
+          font-size: 12px; // Adjust font size for small screens
+        }
       }
     }
   }
 
   .imgContainer {
     flex: 2;
-    background-color: #fcf5f3;
+    background-color: #fcf5f3; // Light mode background color
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: visible; // Ensure overflow is handled
+    @include sm {
+      display: none; // Adjust image width for small screens
+    }
+
     img {
-      width: 100%;
+      width: 105%;
+
+      @include md {
+        width: 105%; // Adjust image width for medium screens
+      }
+    }
+  }
+}
+
+// Dark mode styles using body.dark
+body.dark {
+  .registerPage {
+    .formContainer form {
+      input {
+        border-color: #666; // Dark mode border color for input
+        background-color: #333; // Dark mode background color for input
+        color: #e0e0e0; // Dark mode text color for input
+      }
+
+      span {
+        color: rgba(255, 0, 0, 0.8); // Dark mode error text color
+      }
+
+      a {
+        color: #e0e0e0; // Dark mode link color
+        border-bottom: 1px solid #e0e0e0; // Dark mode border color
+      }
+    }
+
+    .imgContainer {
+      background-color: #333; // Dark mode background color for imgContainer
     }
   }
 }

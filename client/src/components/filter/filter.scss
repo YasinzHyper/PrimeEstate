@@ -1,3 +1,5 @@
+@import "../../responsive.scss";
+
 .filter {
   display: flex;
   flex-direction: column;
@@ -47,6 +49,81 @@
 
       img {
         width: 24px;
+      }
+    }
+  }
+
+  @include sm {
+    // Use CSS Grid for small screens
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // 2 columns grid layout
+    gap: 10px;
+
+    h1 {
+      font-size: 20px; // Smaller font size for small screens
+      grid-column: span 2; // Make the title span both columns
+    }
+    .top {
+      grid-column: span 2;
+    }
+    .item {
+      grid-column: span 1; // Each item takes one column
+      input,
+      select {
+        width: 100%; // Full width on small screens
+        padding: 8px; // Adjust padding for small screens
+        font-size: 12px; // Smaller font size for small screens
+      }
+    }
+
+    .bottom {
+      display: grid;
+      grid-template-columns: repeat(
+        2,
+        1fr
+      ); // 2 columns grid layout for buttons
+      gap: 10px;
+      grid-column: span 2; // Make the buttons span both columns
+
+      button {
+        width: 100%;
+        padding: 12px; 
+        // margin: 5px 0px;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+// Dark mode styles using body.dark
+body.dark {
+  .filter {
+    background-color: transparent; // Dark mode background color for .filter
+
+    h1 {
+      color: #e0e0e0; // Dark mode text color for h1
+    }
+
+    .item {
+      label {
+        color: #e0e0e0; // Dark mode text color for labels
+      }
+
+      input,
+      select {
+        border: 1px solid #666; // Dark mode border color
+        background-color: #333; // Dark mode background color for inputs and selects
+        color: #e0e0e0; // Dark mode text color for inputs and selects
+      }
+    }
+
+    .bottom {
+      button {
+        background-color: #fece51; // Adjust or keep the same color for buttons
+
+        &:hover {
+          background-color: #f0b500; // Dark mode button hover color
+        }
       }
     }
   }

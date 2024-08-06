@@ -1,3 +1,5 @@
+@import "../../responsive.scss";
+
 .login {
   height: 100%;
   display: flex;
@@ -51,11 +53,27 @@
   .imgContainer {
     flex: 2;
     background-color: #fcf5f3;
+    // position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    right: 0;
     img {
-      width: 100%;
+      width: 105%;
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+}
+
+body.dark {
+  .login {
+    .imgContainer {
+      background-color: #333;
+      overflow: visible;
+      // width: ;
     }
   }
 }
