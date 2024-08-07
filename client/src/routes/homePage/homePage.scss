@@ -228,6 +228,9 @@ body.dark {
 
     .imgContainer {
       background-color: #333; // Dark mode background color for imgContainer
+      img {
+        filter: brightness(0.8);
+      }
     }
 
     .wrapper {
