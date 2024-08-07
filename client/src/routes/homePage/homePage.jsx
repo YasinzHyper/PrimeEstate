@@ -19,10 +19,11 @@ const HomePage = () => {
           <div className="wrapper">
             <h1 className="title">Find Real Estate & Get Your Dream Place</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Explore a wide range of properties tailored to your needs, from
+              cozy apartments to luxurious homes. Whether you're buying,
+              renting, or investing, we provide the tools and insights to help
+              you find the perfect place that feels like home. Start your
+              journey with us and turn your dreams into reality.
             </p>
             <SearchBar />
             <div className="boxes">
@@ -43,6 +44,59 @@ const HomePage = () => {
         </div>
         <div className="imgContainer">
           <img src="/bg.png" alt="background" />
+        </div>
+      </div>
+      <div id="about" className="about-us">
+        <div className="about-card">
+          <h2>About Us</h2>
+          <p>
+            At the heart of our mission is a commitment to connecting people
+            with the perfect real estate solutions. Whether you're looking for a
+            cozy home or an investment opportunity, our team is here to guide
+            you every step of the way.
+          </p>
+          <div className="about-details">
+            <div className="detail-item">
+              <i className="material-icons">people</i>
+              <p>Experienced Team</p>
+            </div>
+            <div className="detail-item">
+              <i className="material-icons">location_city</i>
+              <p>Local Expertise</p>
+            </div>
+            <div className="detail-item">
+              <i className="material-icons">support_agent</i>
+              <p>24/7 Support</p>
+            </div>
+          </div>
+          <button className="learn-more-btn">Learn More</button>
+        </div>
+      </div>
+      <div id="contact" className="contact">
+        <div className="left">
+          <div className="logo">
+            <a href="/">
+              <img src="/logo.png" alt="logo" />
+              <span>PrimeEstate</span>
+            </a>
+          </div>
+          <p>
+            Find your dream place with us. Choose from the best properties in
+            the business. We are PrimeEstate.
+          </p>
+        </div>
+        <div className="right">
+          <div>
+            <a href="#top" className="top-button">
+              ^
+            </a>
+          </div>
+          <div className="navigation">
+            <a href="/">Home</a>
+            <a href="#about">About</a>
+            <a href="/list">Properties</a>
+          </div>
+          <p>Copyright © 2024. All rights reserved.</p>
         </div>
       </div>
     </>

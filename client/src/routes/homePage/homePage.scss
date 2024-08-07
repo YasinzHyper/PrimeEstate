@@ -82,6 +82,146 @@
   }
 }
 
+.about-us {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  padding: 40px;
+  background-color: #fff;
+
+  .about-card {
+    background: #fcf5f3;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .about-details {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+
+      .detail-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        i {
+          font-size: 2rem;
+          color: #fdc63b;
+        }
+
+        p {
+          font-size: 1rem;
+          color: #333;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .learn-more-btn {
+      padding: 10px 20px;
+      background-color: #fdc63b;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #e5ac34;
+      }
+    }
+  }
+}
+
+.contact {
+  height: max-content;
+  display: flex;
+  padding: 20px 30px;
+  gap: 30px;
+  // background-color: #333;
+  background-color: #fcf5f3;
+
+  .left {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-bottom: 20px;
+
+    .logo a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: x-large;
+      font-weight: bold;
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  .right {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 20px;
+    padding-bottom: 20px;
+
+    a {
+      transition: all 0.4s ease;
+
+      @include sm {
+        display: none;
+      }
+
+      &:hover {
+        scale: 1.05;
+      }
+    }
+
+    .top-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // gap: 20px;
+      font-size: x-large;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      background-color: #fdc63b;
+    }
+
+    .navigation {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+
 body.dark {
   .homePage {
     background-color: transparent; // Dark mode background color for homePage
@@ -104,5 +244,44 @@ body.dark {
         color: #e0e0e0; // Dark mode text color for h1 and h2
       }
     }
+  }
+
+  .about-us {
+    background-color: transparent; // Dark background for the about-us section
+
+    .about-card {
+      background: #383838; // Darker card background
+      color: #f0f0f0; // Light text color
+
+      h2 {
+        color: #ffffff; // Ensure the heading is visible
+      }
+
+      p {
+        color: #cfcfcf; // Softer light color for paragraphs
+      }
+
+      .detail-item {
+        i {
+          color: #fdc63b; // Retain icon color for contrast
+        }
+
+        p {
+          color: #f0f0f0; // Text color for dark mode
+        }
+      }
+
+      .learn-more-btn {
+        background-color: #fdc63b; // Keep the button vibrant
+        color: #1e1e1e; // Dark text for the button
+        &:hover {
+          background-color: #e5ac34; // Slightly darker on hover
+        }
+      }
+    }
+  }
+
+  .contact {
+    background-color: #333;
   }
 }

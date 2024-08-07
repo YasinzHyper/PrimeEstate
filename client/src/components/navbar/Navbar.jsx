@@ -21,7 +21,7 @@ function NavBar() {
   // const user = true;
   return (
     <nav>
-      <div className="left">
+      <div className="left" id="top">
         <a href="/" className="logo">
           <img src="/logo.png" alt="logo" />
           <span>PrimeEstate</span>

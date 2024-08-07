@@ -9,6 +9,7 @@
   padding-right: 20px;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 
   @include lg {
     background-color: rgb(255, 255, 255);
@@ -32,22 +33,6 @@
 
 body.dark {
   .layout {
-    background-color: #333; // Dark mode background color
-
-    @include lg {
-      background-color: #2a2a2a;
-    }
-
-    @include md {
-      background-color: #2a2a2a;
-    }
-
-    @include sm {
-      background-color: #2a2a2a;
-    }
-
-    .content {
-      // Add dark mode styles for content here, if needed
-    }
+    background-color: #222; // Dark mode background color
   }
 }
