@@ -1,13 +1,28 @@
+@import "../../responsive.scss";
+
 .newPostPage {
   height: 100%;
   display: flex;
+  flex-direction: row;
+
+  @include md {
+    flex-direction: column;
+  }
 
   .formContainer {
     flex: 3;
-    overflow: scroll;
+    overflow-y: scroll;
 
     .wrapper {
       margin: 30px 50px 100px 0px;
+
+      @include md {
+        margin: 20px 20px 50px 0px;
+      }
+
+      @include sm {
+        margin: 20px 10px 30px 0px;
+      }
 
       form {
         display: flex;
@@ -15,13 +30,23 @@
         flex-wrap: wrap;
         gap: 20px;
 
+        @include sm {
+          flex-direction: column;
+          gap: 15px;
+        }
+
         .item {
           width: 30%;
           display: flex;
           flex-direction: column;
           gap: 5px;
 
-          label {
+          @include md {
+            width: 45%;
+          }
+
+          @include sm {
+            width: 100%;
           }
 
           input {
@@ -38,13 +63,24 @@
             width: 100%;
             height: 320px;
 
+            @include sm {
+              height: 240px;
+              margin-bottom: 20px;
+            }
+
             .quill > .ql-container > .ql-editor {
               height: 200px;
               font-size: 16px;
+
+              @include sm {
+                height: 160px;
+              }
             }
           }
         }
+
         .sendButton {
+          // height: 100px;
           width: 30%;
           border-radius: 5px;
           border: none;
@@ -52,6 +88,16 @@
           color: white;
           font-weight: bold;
           cursor: pointer;
+
+          @include md {
+            width: 45%;
+            height: 80px;
+          }
+
+          @include sm {
+            width: 100%;
+            height: 70px;
+          }
         }
       }
     }
@@ -66,11 +112,47 @@
     align-items: center;
     justify-content: center;
 
+    @include md {
+      background-color: transparent;
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 10px;
+    }
+
+    @include sm {
+      flex-direction: column;
+      background-color: #fcf5f3;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
     img {
       width: 50%;
       height: 180px;
       object-fit: cover;
       border-radius: 5px;
+
+      @include md {
+        width: 40%;
+        height: 150px;
+      }
+
+      @include sm {
+        width: 60%;
+        height: 140px;
+      }
+    }
+  }
+}
+
+body.dark {
+  .newPostPage {
+    .sideContainer {
+      background-color: #333;
+      @include sm {
+        background-color: transparent;
+      }
     }
   }
 }

@@ -73,6 +73,7 @@ nav {
       display: flex;
       align-items: center;
       font-weight: bold;
+      justify-content: space-between;
 
       img {
         width: 40px;
@@ -83,9 +84,10 @@ nav {
       }
 
       span {
-        @include sm {
-          display: none;
-        }
+        // @include sm {
+        //   display: none;
+        // }
+        margin-right: 10px;
       }
 
       .profile {
@@ -94,7 +96,9 @@ nav {
         cursor: pointer;
         border: none;
         position: relative;
-
+        span {
+          margin: 0;
+        }
         .notification {
           position: absolute;
           top: -8px;
@@ -159,6 +163,55 @@ nav {
         a {
           display: initial;
         }
+      }
+
+      .user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        gap: 10px;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-right: 0;
+        }
+
+        .profile {
+          padding: 10px 16px;
+          background-color: #fece51;
+          cursor: pointer;
+          border: none;
+          position: relative;
+
+          .notification {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: rgb(233, 68, 68);
+            color: white;
+            border-radius: 50%;
+            font-size: 12px;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+
+      span {
+        margin: 0;
+      }
+
+      .register {
+        background-color: #fece51;
+        padding: 18px;
       }
     }
     @include md {

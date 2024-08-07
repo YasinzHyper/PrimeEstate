@@ -98,3 +98,49 @@
     }
   }
 }
+
+body.dark {
+  .profilePage {
+    background-color: transparent;
+
+    .details {
+      scrollbar-color: #555 transparent;
+    }
+
+    .wrapper {
+      .title {
+        h1 {
+          color: #e0e0e0;
+        }
+
+        button {
+          background-color: #fece51;
+          color: #333;
+        }
+      }
+
+      .info {
+        background-color: #333333;
+        color: #e0e0e0;
+
+        span {
+          color: #e0e0e0;
+        }
+
+        button {
+          background-color: #00695c;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .chatContainer {
+    // background-color: #333;
+    // color: #e0e0e0;
+
+    .wrapper {
+      background-color: #333;
+    }
+  }
+}

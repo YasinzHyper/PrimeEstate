@@ -123,3 +123,65 @@
     }
   }
 }
+
+body.dark {
+  .chat {
+    .messages {
+      scrollbar-color: #444444 transparent;
+
+      .message {
+        // background-color: transparent;
+        color: #111;
+
+        img {
+          border: 2px solid #444;
+        }
+      }
+    }
+
+    .chatBox {
+      background-color: #333;
+
+      .top {
+        background-color: #444;
+        color: #fff;
+
+        .user img {
+          border: 2px solid #555;
+        }
+      }
+
+      .center {
+        scrollbar-color: #444444 transparent;
+
+        .chatMessage {
+          span {
+            background-color: #555;
+            color: #fff;
+          }
+
+          &.own span {
+            background-color: #666;
+          }
+        }
+      }
+
+      .bottom {
+        border-top: 2px solid #555;
+
+        textarea {
+          background-color: #383838;
+          color: #e0e0e0;
+        }
+
+        button {
+          background-color: #fece51;
+
+          &:hover {
+            background-color: #f7c14b;
+          }
+        }
+      }
+    }
+  }
+}

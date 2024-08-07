@@ -3,7 +3,6 @@ import "./navbar.scss";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useNotificationStore } from "../../lib/notificationStore";
-import Toggle from "react-toggle";
 import "react-toggle/style.css";
 import DarkModeToggle from "../darkModeToggle/DarkModeToggle";
 function NavBar() {
@@ -33,7 +32,7 @@ function NavBar() {
         <a href="#contact">Contact</a>
       </div>
       <div className="right">
-        <DarkModeToggle/>
+        <DarkModeToggle />
         {currentUser ? (
           <div className="user">
             <img src={currentUser.avatar || "/noavatar.jpg"} alt="user" />
@@ -55,12 +54,27 @@ function NavBar() {
           <img src="/menu.png" alt="menu" onClick={() => setOpen(!open)} />
         </div>
         <div className={open ? "menu active" : "menu"}>
+          {currentUser ? (
+            <div className="user">
+              <img src={currentUser.avatar || "/noavatar.jpg"} alt="user" />
+              <span>{currentUser.username}</span>
+              <Link className="profile" to="/profile">
+                {number > 0 && <div className="notification">{number}</div>}
+                <span>Profile</span>
+              </Link>
+            </div>
+          ) : (
+            <>
+              <a href="/login">Sign in</a>
+              <a href="/register" className="register">
+                Sign up
+              </a>
+            </>
+          )}
           <a href="/">Home</a>
-          <a href="/">About</a>
-          <a href="/">Contact</a>
+          <a href="#about">About</a>
           <a href="/list">Properties</a>
-          <a href="/">Sign in</a>
-          <a href="/">Sign up</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
     </nav>
