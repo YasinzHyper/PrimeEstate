@@ -18,6 +18,7 @@ export const getPosts = async (req, res) => {
           lte: parseInt(query.maxPrice) || 10000000000000,
         },
       },
+      cacheStrategy: { ttl: 60 },
     });
 
     res.status(200).json(posts);
