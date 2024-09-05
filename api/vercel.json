@@ -8,8 +8,28 @@
     ],
     "routes": [
         {
-            "src": "/(.*)",
+            "src": "/api",
             "dest": "/app.js"
+        },
+        {
+            "src": "/api/auth(.*)",
+            "dest": "/routes/auth_route.js"
+        },
+        {
+            "src": "/api/chats(.*)",
+            "dest": "/routes/chat_route.js"
+        },
+        {
+            "src": "/api/posts(.*)",
+            "dest": "/routes/post_route.js"
+        },
+        {
+            "src": "/api/users(.*)",
+            "dest": "/routes/user_route.js"
+        },
+        {
+            "src": "/api/messages(.*)",
+            "dest": "/routes/message_route.js"
         }
     ]
 }
