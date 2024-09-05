@@ -5,7 +5,7 @@ export const getPosts = async (req, res) => {
   const query = req.query;
   // console.log(query);
   console.log("process: " + process);
-  res.status(200).json({ message: "getPosts test prisma not working?" });
+  res.status(200).json({ message: "process: " + process });
   try {
     const posts = await prisma.post.findMany({
       where: {
