@@ -1,6 +1,8 @@
 import { PrismaClient } from "@prisma/client";
 import { withAccelerate } from '@prisma/extension-accelerate'
 
+let prisma;
+
 if (process.env.NODE_ENV === "production") {
     if (!global.prisma) {
         global.prisma = new PrismaClient().$extends(withAccelerate());
