@@ -5,8 +5,8 @@ generator client {
 datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
-  directUrl = env("DIRECT_DATABASE_URL")  // add this if needed
-  relationMode = "prisma"
+  // directUrl = env("DIRECT_DATABASE_URL")  // add this if needed
+  // relationMode = "prisma"
 }
 
 model User {
