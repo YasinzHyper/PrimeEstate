@@ -62,8 +62,9 @@ export const login = async (req, res) => {
     res
       .cookie("token", token, {
         httpOnly: true,
-        // secure: true,
+        secure: process.env.NODE_ENV === 'production',
         maxAge: age,
+        sameSite: 'None', // This is needed when using cookies with cross-origin requests
       })
       .status(200)
       .json(userInfo);
@@ -75,7 +76,11 @@ export const login = async (req, res) => {
 
 export const logout = (req, res) => {
   res
-    .clearCookie("token")
-    .status(200)
-    .json({ message: "Logged out successfully" });
+  .clearCookie("token", {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'None',
+  })
+  .status(200)
+  .json({ message: "Logged out successfully" });
 };
