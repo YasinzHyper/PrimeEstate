@@ -13,9 +13,11 @@ A Full-Stack real estate web application built using MERN stack.
 - **Real-time Chat:** Engage in instant messaging with property owners and potential buyers.
 - **Advanced Search:** Utilize powerful search and query functionalities to find the perfect property. 
 
+## DEMO
 
+https://prime-estate-rho.vercel.app/
 
-### Built With
+## Built With
 
 <div>
   <p>Frontend (Client-Side) :</p>
