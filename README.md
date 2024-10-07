@@ -64,7 +64,7 @@ Run this in the server-side (api) terminal
 
 **4.2 Backend**
 ```
-cd server
+cd api
 npm i
 npm run dev
 ```
